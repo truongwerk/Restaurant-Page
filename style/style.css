@@ -172,17 +172,19 @@ body {
 }
 .navBtn {
 	border: 0;
-	padding: 5px;
+	padding: 10px;
 	color: white;
 	background: none;
-	font-size: x-large;
+	font-size: large;
 	font-weight: bold;
 	transition: all 0.3s;
 }
 .navBtn:hover {
 	transform: translateY(-15%);
 }
-
+.active {
+	border-bottom: 2px solid white;
+}
 /*Footer*/
 #footer {
 	padding-top: 10px;
@@ -213,12 +215,96 @@ body {
 }
 
 /*body*/
-
 #body {
 	width: 750px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	height: 500px;
+	padding: 5px;
 	flex-shrink: 0;
-	background-color: rgb(165, 42, 42, 0.3);
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+@media only screen and (max-width: 800px) {
+	#body {
+		width: 90%;
+	}
+}
+@font-face {
+	font-family: homeWelcome;
+	src: url(DeliusSwashCaps-Regular.ttf);
+}
+.welcome {
+	text-align: center;
+	color: white;
+	font-size: xx-large;
+	font-weight: bolder;
+	font-family: homeWelcome, "Courier New", Courier, monospace;
+}
+#burgerImg {
+	width: 50%;
+	border-radius: 100%;
+}
+
+/*Menu (dish,name,cal) */
+#menuDiv {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.dishDiv {
+	width: 300px;
+	height: 300px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: rgb(0, 0, 0, 0.6);
+	transition: all 0.3s;
+}
+.dishDiv:hover {
+	background-color: rgb(255, 69, 0, 0.6);
+}
+.dishImg {
+	width: 70%;
+}
+
+.dishName {
+	color: white;
+	font-family: title, "Franklin Gothic Medium", "Arial Narrow", Arial,
+		sans-serif;
+	font-size: x-large;
+}
+
+.dishCal {
+	color: aliceblue;
+	font-size: large;
+	font-weight: bold;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Contact (phone, addrest, map)*/
+@font-face {
+	font-family: contact;
+	src: url(PasseroOne-Regular.ttf);
+}
+
+#phoneNumber, #addrest {
+	color: white;
+	font-size: xx-large;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	align-self: start;
+	font-family: contact,Georgia, 'Times New Roman', Times, serif;
+}
+
+#map{
+	width: 80%;
+	border: 3px solid black;
 }
