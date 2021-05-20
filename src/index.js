@@ -1,3 +1,7 @@
+import createHome from "./home";
+import createMenu from "./menu";
+import createContact from "./contact";
+
 //create header (title + navigator)
 const content = document.querySelector("#content");
 
@@ -6,7 +10,7 @@ headerDiv.id = "header";
 
 const titleH1 = document.createElement("h1");
 titleH1.id = "title";
-titleH1.innerText = "Burger Queen";
+titleH1.innerText = "Burger XYZ";
 
 const navigator = document.createElement("nav");
 navigator.id = "navigator";
@@ -54,17 +58,37 @@ repoLink.append(repoImage);
 footerDiv.append(nameH1, repoLink);
 content.append(headerDiv, bodyDiv, footerDiv);
 
-homeBtn.addEventListener('click',)
-
-function createBody(button){
+//Navigator events
+homeBtn.addEventListener("click", (e) => {
+	if (e.target.classList.contains("active")) return;
+	setActive(homeBtn);
 	clearBody();
-	if (button==='home'){
+	createHome();
+});
+menuBtn.addEventListener("click", (e) => {
+	if (e.target.classList.contains("active")) return;
+	setActive(menuBtn);
+	clearBody();
+	createMenu();
+});
+contactBtn.addEventListener("click", (e) => {
+	if (e.target.classList.contains("active")) return;
+	setActive(contactBtn);
+	clearBody();
+	createContact();
+});
 
-	}
+function setActive(button) {
+	const buttons = document.querySelectorAll(".navBtn");
+	buttons.forEach((btn) => {
+		btn.classList.remove("active");
+	});
+	button.classList.add("active");
 }
-
-function clearBody(){
+function clearBody() {
 	while (bodyDiv.firstChild) {
 		bodyDiv.removeChild(bodyDiv.firstChild);
 	}
 }
+setActive(homeBtn);
+createHome();
