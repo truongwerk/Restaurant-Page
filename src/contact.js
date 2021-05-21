@@ -1,5 +1,6 @@
 function createContact() {
 	const bodyDiv = document.querySelector("#body");
+	bodyDiv.innerHTML = "";
 	const phoneNumber = document.createElement("p");
 	phoneNumber.innerText = "Phone: 987-654-321";
 	phoneNumber.id = "phoneNumber";

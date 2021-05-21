@@ -96,6 +96,7 @@ function createDish5() {
 
 function createMenu() {
 	const bodyDiv = document.querySelector("#body");
+	bodyDiv.innerHTML = "";
 	const menuDiv = document.createElement("div");
 	menuDiv.id = "menuDiv";
 	menuDiv.append(

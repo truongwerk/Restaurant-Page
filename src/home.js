@@ -1,5 +1,6 @@
 function createHome() {
 	const bodyDiv = document.querySelector("#body");
+	bodyDiv.innerHTML = "";
 	const welcome1H2 = document.createElement("h2");
 	welcome1H2.innerText = "Hungry? We got you.";
 	welcome1H2.classList = "welcome";
