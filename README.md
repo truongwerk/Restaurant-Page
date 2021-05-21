@@ -7,3 +7,4 @@
 - Everything create by DOM.
 - Create Home, Menu, Contact tabs by separate Js Modules.
 - Combine to one script with Webpack.
+- Functional programming.
