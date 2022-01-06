@@ -1,7 +1,7 @@
 //Import Module
-import createHome from "./home";
-import createMenu from "./menu";
-import createContact from "./contact";
+import createHome from "./home.js";
+import createMenu from "./menu.js";
+import createContact from "./contact.js";
 
 //create header (title + navigator)
 function createHeader() {
